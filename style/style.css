@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cool-text {
+  display: block;
+  font-size: 5rem;
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,37,172,1) 48%, rgba(0,212,255,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transform: translateY(-80px);
+  animation: enterText 800ms ease-in-out forwards;
+}
+
+@keyframes enterText {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.underline {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,37,172,1) 48%, rgba(0,212,255,1) 100%);
+  border: none;
+  height: .75rem;
+  opacity: 0;
+  transform: scaleX(0);
+  animation: showUnderline 800ms ease-in-out forwards;
+  animation-delay: 700ms;
+  /*transform-origin: left;*/
+}
+
+@keyframes showUnderline {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
